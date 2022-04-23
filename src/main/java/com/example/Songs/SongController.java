@@ -12,7 +12,7 @@ import static java.lang.Integer.parseInt;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class SongController {
     @Autowired
     SongRepository repository;
