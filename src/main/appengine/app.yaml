@@ -1,1 +1,3 @@
 runtime: java11
+header := w.Header()
+header.Add("Access-Control-Allow-Origin", "*")
