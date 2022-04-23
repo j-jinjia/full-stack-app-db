@@ -12,11 +12,10 @@ import static java.lang.Integer.parseInt;
 
 
 @RestController
+@CrossOrigin
 public class SongController {
     @Autowired
     SongRepository repository;
-
-    @CrossOrigin
     @GetMapping("/api/songs")
     public ResponseEntity<List<Song>> getSongs(){
         return ResponseEntity.status(HttpStatus.OK).body(repository.findAll());
