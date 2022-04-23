@@ -10,12 +10,13 @@ import java.util.List;
 
 import static java.lang.Integer.parseInt;
 
-@CrossOrigin
+
 @RestController
 public class SongController {
     @Autowired
     SongRepository repository;
 
+    @CrossOrigin
     @GetMapping("/api/songs")
     public ResponseEntity<List<Song>> getSongs(){
         return ResponseEntity.status(HttpStatus.OK).body(repository.findAll());
