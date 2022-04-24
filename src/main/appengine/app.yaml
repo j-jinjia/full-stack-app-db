@@ -1,7 +1,7 @@
 runtime: java11
 handlers:
-  - url: /images
-    static_dir: static/images
+  - url: /
+    static_dir: static/
     http_headers:
-      Access-Control-Allow-Origin: {https://full-stack-project-songs.nw.r.appspot.com}
+      Access-Control-Allow-Origin: {"https://full-stack-project-songs.nw.r.appspot.com"}
     # ...
