@@ -1,3 +1,7 @@
 runtime: java11
-header := w.Header()
-header.Add("Access-Control-Allow-Origin", "*")
+handlers:
+  - url: /images
+    static_dir: static/images
+    http_headers:
+      Access-Control-Allow-Origin: {https://full-stack-project-songs.nw.r.appspot.com}
+    # ...

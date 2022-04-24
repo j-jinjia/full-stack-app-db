@@ -18,11 +18,7 @@ public class SongsApplication {
 		SpringApplication.run(SongsApplication.class, args);
 	}
 
-	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		resp.addHeader("Access-Control-Allow-Origin", "*");
-		resp.addHeader("Content-Type", "text/csv");
-		resp.getWriter().append("csvString");
-	}
+
 }
 //	{
 //			"song": "Beat it",
