@@ -4,6 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
 @CrossOrigin
 
 @SpringBootApplication
@@ -14,6 +18,11 @@ public class SongsApplication {
 		SpringApplication.run(SongsApplication.class, args);
 	}
 
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		resp.addHeader("Access-Control-Allow-Origin", "*");
+		resp.addHeader("Content-Type", "text/csv");
+		resp.getWriter().append("csvString");
+	}
 }
 //	{
 //			"song": "Beat it",
