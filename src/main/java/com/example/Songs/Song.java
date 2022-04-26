@@ -17,7 +17,7 @@ public class Song {
     private String genre;
     private String artist;
     private String album;
-    private String name;
+    private String fullName;
     private URL ytURL;
     private URL imageURL;
     private Timestamp addDate;
@@ -34,7 +34,7 @@ public class Song {
         this.genre = genre;
         this.artist = artist;
         this.album = album;
-        this.name = name;
+        this.fullName = name;
         this.ytURL = ytURL;
         this.imageURL = imageURL;
         this.addDate = addDate;
@@ -80,12 +80,12 @@ public class Song {
         this.album = album;
     }
 
-    public String getName() {
-        return name;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public URL getYtURL() {
@@ -120,7 +120,7 @@ public class Song {
                 ", genre='" + genre + '\'' +
                 ", artist='" + artist + '\'' +
                 ", album='" + album + '\'' +
-                ", name='" + name + '\'' +
+                ", name='" + fullName + '\'' +
                 ", ytURL=" + ytURL +
                 ", imageURL=" + imageURL +
                 ", addDate=" + addDate +
